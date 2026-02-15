@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="about.css" />
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Portfolio.</h2>
+            <ul>
+                <li><a href="homepg.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skill.html">Skills</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about">
+        <div class="about-img">
+            <div class="glow">
+                <img src="C:\Users\Prashanthi.K\Downloads\WhatsApp Image 2025-11-14 at 1.34.46 PM.jpeg" alt="Profile Image">
+            </div>
+        </div>
+
+        <div class="about-text">
+            <h1>About <span>Me</span></h1>
+            <h3>Full Stack Developer!</h3>
+            <p>
+                I am a skilled web designer seeking opportunity to showup my skill in the industry.
+                My passion lies in creating captivating website designs and implementing them 
+                through frontend development. I take pride in staying up-to-date with current 
+                design trends and leveraging my creativity to produce visually appealing 
+                and user-friendly websites.
+            </p>
+            <button class="btn" onclick="toggleDetails()">More About Me</button>
+        </div>
+    </div>
+
+    <!-- HIDDEN DETAILS SECTION -->
+    <div id="more-details">
+
+        <div class="detail-box">
+            <h3>Strengths</h3>
+            <p>• Problem Solving • Quick Learner • Time Management • Team Collaboration</p>
+        </div>
+
+        <div class="detail-box">
+            <h3>Hobbies</h3>
+            <p>• Drawing • Listening to Music • Making crafts</p>
+        </div>
+
+        <div class="detail-box">
+            <h3>Education</h3>
+            <p>
+                B.E in Computer Science (2023– 2027), P.A.College of Engineering and Technology
+                HSC – Mariammal Girls Higher Secondary School
+            </p>
+        </div>
+
+        <div class="detail-box">
+            <h3>Extracurricular Activities</h3>
+            <p>• Organized college tech events • Participated in coding competitions • Volunteer activities</p>
+        </div>
+
+        <div class="detail-box">
+            <h3>Paper Presentations</h3>
+            <p>Presented a paper on “AI vs VR” at Ramakrishna College of Engineering and Technology</p>
+            <p>Presented a paper on "Cybersecurity at Hindustan College of Technology</p><br>
+            <h3>Interships</h3>
+            <p>Intern at Techvolt Software pvt ltd on "Web Development"</p>
+            <p>Intern at Apex Sys on "UI/UX Design"</p>
+            <p>Intern at Codealpha on "Data Analysis"</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function toggleDetails() {
+    var section = document.getElementById("more-details");
+
+    if (section.style.display === "none" || section.style.display === "") {
+        section.style.display = "block";
+        window.scrollTo({ top: section.offsetTop - 50, behavior: "smooth" });
+    } else {
+        section.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
