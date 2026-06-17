@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Skills Section</title>
+ <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Portfolio.</div>
+
+            <ul class="nav-links">
+                <li><a href="homepg.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skill.html">Skills</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<style>
+    /* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00eaff;
+}
+
+    body{
+        margin:0;
+        padding:0;
+        background:#062230;
+        font-family:Arial, Helvetica, sans-serif;
+        color:white;
+    }
+
+    .skills-section{
+        width:90%;
+        margin:50px auto;
+        display:flex;
+        justify-content:space-between;
+    }
+
+    /* ------------------ HEADINGS ------------------ */
+    h2{
+        text-align:center;
+        margin-bottom:20px;
+        font-size:24px;
+        letter-spacing:1px;
+        border-bottom:2px solid #00eaff;
+        width:60%;
+        margin-left:auto;
+        margin-right:auto;
+        padding-bottom:8px;
+    }
+
+    /* =================== TECHNICAL SKILLS ===================== */
+
+    .technical, .professional{
+        width:45%;
+    }
+
+    .skill{
+        margin-bottom:25px;
+    }
+
+    .skill-title{
+        display:flex;
+        justify-content:space-between;
+        margin-bottom:7px;
+        font-size:17px;
+    }
+
+    .bar{
+        width:100%;
+        height:7px;
+        background:#10394d;
+        border-radius:10px;
+        overflow:hidden;
+    }
+
+    .bar span{
+        height:100%;
+        width:0;
+        display:block;
+        background:#00eaff;
+        border-radius:10px;
+    }
+
+    /* animation for each bar */
+    .html{ animation:htmlLoad 3s forwards; }
+    .css{ animation:cssLoad 3s forwards; }
+    .js{ animation:jsLoad 3s forwards; }
+    .python{ animation:pythonLoad 3s forwards; }
+    .react{ animation:reactLoad 3s forwards; }
+
+    @keyframes htmlLoad{ to{ width:90%; } }
+    @keyframes cssLoad{ to{ width:80%; } }
+    @keyframes jsLoad{ to{ width:67%; } }
+    @keyframes pythonLoad{ to{ width:75%; } }
+    @keyframes reactLoad{ to{ width:70%; } }
+
+    /* =================== PROFESSIONAL CIRCLES ===================== */
+
+    .circle-wrap{
+        display:flex;
+        justify-content:space-around;
+        flex-wrap:wrap;
+    }
+
+    .circle{
+        width:150px;
+        height:150px;
+        margin:20px;
+        position:relative;
+    }
+
+    .circle svg{
+        width:150px;
+        height:150px;
+        transform:rotate(-90deg);
+    }
+
+    .circle svg circle{
+        fill:none;
+        stroke-width:10;
+        r:65;
+        cx:75;
+        cy:75;
+        stroke-linecap:round;
+    }
+
+    .circle .bg{
+        stroke:#10394d;
+    }
+
+    .circle .progress{
+        stroke:#00eaff;
+        stroke-dasharray:410;
+        stroke-dashoffset:410;
+        animation:loadCircle 3s forwards;
+    }
+
+    /* custom animation using CSS variable */
+    @keyframes loadCircle{
+        to{
+            stroke-dashoffset:var(--value);
+        }
+    }
+
+    .percentage{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        font-size:22px;
+        font-weight:bold;
+    }
+
+    .p-title{
+        text-align:center;
+        margin-top:8px;
+        font-size:16px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="skills-section">
+
+    <!---------------------- TECHNICAL SKILLS ---------------------->
+    <div class="technical">
+        <h2>Technical Skills</h2>
+
+        <div class="skill">
+            <div class="skill-title">
+                <span>HTML</span>
+                <span>90%</span>
+            </div>
+            <div class="bar"><span class="html"></span></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">
+                <span>CSS</span>
+                <span>80%</span>
+            </div>
+            <div class="bar"><span class="css"></span></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">
+                <span>JavaScript</span>
+                <span>67%</span>
+            </div>
+            <div class="bar"><span class="js"></span></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">
+                <span>Python</span>
+                <span>75%</span>
+            </div>
+            <div class="bar"><span class="python"></span></div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">
+                <span>React</span>
+                <span>70%</span>
+            </div>
+            <div class="bar"><span class="react"></span></div>
+        </div>
+    </div>
+
+    <!---------------------- PROFESSIONAL SKILLS ---------------------->
+    <div class="professional">
+
+        <h2>Professional Skills</h2>
+
+        <div class="circle-wrap">
+
+            <!-- Creativity 50% -->
+            <div class="circle" style="--value:205;">
+                <svg>
+                    <circle class="bg"></circle>
+                    <circle class="progress"></circle>
+                </svg>
+                <div class="percentage">50%</div>
+                <div class="p-title">Creativity</div>
+            </div>
+
+            <!-- Communication 65% -->
+            <div class="circle" style="--value:140;">
+                <svg>
+                    <circle class="bg"></circle>
+                    <circle class="progress"></circle>
+                </svg>
+                <div class="percentage">65%</div>
+                <div class="p-title">Communication</div>
+            </div>
+
+            <!-- Problem Solving 75% -->
+            <div class="circle" style="--value:100;">
+                <svg>
+                    <circle class="bg"></circle>
+                    <circle class="progress"></circle>
+                </svg>
+                <div class="percentage">75%</div>
+                <div class="p-title">Problem Solving</div>
+            </div>
+
+            <!-- Teamwork 65% -->
+            <div class="circle" style="--value:140;">
+                <svg>
+                    <circle class="bg"></circle>
+                    <circle class="progress"></circle>
+                </svg>
+                <div class="percentage">65%</div>
+                <div class="p-title">Teamwork</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

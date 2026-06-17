@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #061b29;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00eaff;
+}
+
+/* Hero Section */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
+}
+
+.home-content {
+    max-width: 500px;
+}
+
+.home-content h2 {
+    font-size: 28px;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.home-content h3 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.highlight {
+    color: #00eaff;
+}
+
+.typing {
+    color:#00eaff;
+    border-right: 2px solid #00eaff;
+    padding-right: 5px;
+    animation: blink 0.7s infinite;
+    font-weight: bold;
+}
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}
+.home-content p {
+    margin-top: 15px;
+    line-height: 1.6;
+    color: #d6d6d6;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    margin-top: 20px;
+    font-size: 22px;
+    color: #00eaff;
+    border: 2px solid #00eaff;
+    padding: 8px 12px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #00eaff;
+    color: #061b29;
+}
+
+/* Profile Image Section */
+.home-img .img-box {
+    width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    padding: 8px;
+    background: linear-gradient(45deg, #ff00cc, #00eaff, #00ff6a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img .img-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
