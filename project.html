@@ -137,18 +137,13 @@
         <h1 class="title">Latest<span>Project</span></h1>
 
         <div class="project-container">
-            
-            <!-- Project 1 -->
-            <div class="card" onclick="openModal('project1')">
-                <img src="app.jpeg" alt="Project 1">
-            </div>
 
-            <!-- Project 2 -->
+            <!-- Project 1 -->
             <div class="card" onclick="openModal('project2')">
                 <img src="ui.jpeg" alt="Project 2">
             </div>
 
-            <!-- Project 3 -->
+            <!-- Project 2 -->
             <div class="card" onclick="openModal('project3')">
                 <img src="eda.png" alt="Project 3">
             </div>
@@ -172,18 +167,13 @@
     const modal = document.getElementById("modal");
     const title = document.getElementById("modal-title");
     const text = document.getElementById("modal-text");
-
+            
     if (project === "project1") {
-        title.innerHTML = "Website Development";
-        text.innerHTML = "Built a full responsive mobile website using clean HTML and modern CSS. Focused on fast loading, mobile-friendly styling and a seamless user experience.";
-    }
-
-    if (project === "project2") {
         title.innerHTML = "UI/UX Mobile App Design";
         text.innerHTML = "This project involves designing a user-friendly mobile app interface in figma with a clean and modern layout. Developed high fidelity interactive prototypes to deliver a seamless and engaging user experience.";
     }
 
-    if (project === "project3") {
+    if (project === "project2") {
         title.innerHTML = "EDA and Data Visualization";
         text.innerHTML = "Explored the dataset to understand structure, missing values and outliers.Analysed relationship between features to uncover key patterns. Used visualization to clearly present trends and insights";
     }
